@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unisciti al Server - Il Tuo Server Minecraft</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>PSCraft</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mod.html">Mod</a></li>
+                <li><a href="regole.html">Regole</a></li>
+                <li><a href="galleria.html">Galleria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="join-page">
+        <h2>Unisciti al Server</h2>
+        <p>Per entrare nel nostro server Minecraft, segui questi semplici passi:</p>
+        <ul class="join-steps">
+            <li>1. Apri il tuo client Minecraft.</li>
+            <li>2. Vai su <strong>Multiplayer</strong> e clicca su <strong>Aggiungi Server</strong>.</li>
+            <li>3. Inserisci il nome del server che preferisci.</li>
+            <li>4. Inserisci il nostro indirizzo IP: <span class="server-ip">ancora da definire</span></li>
+            <li>5. Salva e clicca su <strong>Entra nel Server</strong>.</li>
+        </ul>
+        <p class="blink">Il nostro server &egrave; accessibile soltanto su Minecraft Java!!!</p>
+
+        <a href="#" class="btn" id="copy-ip-btn">Copia IP</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PSCraft. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        // Funzione per copiare l'IP del server
+        document.getElementById('copy-ip-btn').addEventListener('click', function() {
+            const ip = document.querySelector('.server-ip').textContent;
+            navigator.clipboard.writeText(ip).then(() => {
+                alert('IP del server copiato negli appunti!');
+            });
+        });
+    </script>
+</body>
+</html>
